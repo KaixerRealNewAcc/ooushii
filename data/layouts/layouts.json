@@ -4,7 +4,7 @@
     {
       "id": "LAYOUT_PETALBURG_CITY",
       "name": "PetalburgCity_Layout",
-      "width": 30,
+      "width": 34,
       "height": 30,
       "primary_tileset": "gTileset_General",
       "secondary_tileset": "gTileset_Petalburg",
@@ -9323,6 +9323,26 @@
       "border_height": 2,
       "border_width": 2,
       "layout_version": "frlg"
+    },
+    {
+      "id": "LAYOUT_PETALBURG_GROTTO",
+      "name": "Petalburg_Grotto_Layout",
+      "width": 6,
+      "height": 6,
+      "primary_tileset": "gTileset_General",
+      "secondary_tileset": "gTileset_Petalburg",
+      "border_filepath": "data/layouts/Petalburg_Grotto/border.bin",
+      "blockdata_filepath": "data/layouts/Petalburg_Grotto/map.bin"
+    },
+    {
+      "id": "LAYOUT_RUSTBORO_GROTTO",
+      "name": "Rustboro_Grotto_Layout",
+      "width": 10,
+      "height": 6,
+      "primary_tileset": "gTileset_General",
+      "secondary_tileset": "gTileset_Rustboro",
+      "border_filepath": "data/layouts/Rustboro_Grotto/border.bin",
+      "blockdata_filepath": "data/layouts/Rustboro_Grotto/map.bin"
     }
   ]
 }

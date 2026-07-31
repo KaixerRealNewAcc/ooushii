@@ -25,7 +25,12 @@
     },
     {
       "map": "MAP_ROUTE116",
-      "offset": 0,
+      "offset": 1,
+      "direction": "right"
+    },
+    {
+      "map": "MAP_RUSTBORO_GROTTO",
+      "offset": 50,
       "direction": "right"
     }
   ],
@@ -179,8 +184,8 @@
     },
     {
       "graphics_id": "OBJ_EVENT_GFX_ITEM_BALL",
-      "x": 36,
-      "y": 51,
+      "x": 33,
+      "y": 58,
       "elevation": 3,
       "movement_type": "MOVEMENT_TYPE_LOOK_AROUND",
       "movement_range_x": 0,

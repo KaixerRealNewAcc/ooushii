@@ -21,7 +21,7 @@ const struct SpeciesInfo gSpeciesInfoGen4[] =
         .friendship = STANDARD_FRIENDSHIP,
         .growthRate = GROWTH_MEDIUM_SLOW,
         .eggGroups = MON_EGG_GROUPS(EGG_GROUP_MONSTER, EGG_GROUP_GRASS),
-        .abilities = { ABILITY_OVERGROW, ABILITY_NONE, ABILITY_SHELL_ARMOR },
+        .abilities = { ABILITY_OVERGROW, ABILITY_SOLID_ROCK, ABILITY_SHELL_ARMOR },
         .bodyColor = BODY_COLOR_GREEN,
         .speciesName = _("Turtwig"),
         .cryId = CRY_TURTWIG,
@@ -67,10 +67,11 @@ const struct SpeciesInfo gSpeciesInfoGen4[] =
             gOverworldPalette_Turtwig,
             gShinyOverworldPalette_Turtwig
         )
+        .perfectIVCount = STARTER_PERFECT_IV_COUNT,
         .levelUpLearnset = sTurtwigLevelUpLearnset,
         .teachableLearnset = sTurtwigTeachableLearnset,
         .eggMoveLearnset = sTurtwigEggMoveLearnset,
-        .evolutions = EVOLUTION({EVO_LEVEL, 18, SPECIES_GROTLE}),
+        .evolutions = EVOLUTION({EVO_LEVEL, 16, SPECIES_GROTLE}),
     },
 
     [SPECIES_GROTLE] =
@@ -91,7 +92,7 @@ const struct SpeciesInfo gSpeciesInfoGen4[] =
         .friendship = STANDARD_FRIENDSHIP,
         .growthRate = GROWTH_MEDIUM_SLOW,
         .eggGroups = MON_EGG_GROUPS(EGG_GROUP_MONSTER, EGG_GROUP_GRASS),
-        .abilities = { ABILITY_OVERGROW, ABILITY_NONE, ABILITY_SHELL_ARMOR },
+        .abilities = { ABILITY_OVERGROW, ABILITY_SOLID_ROCK, ABILITY_SHELL_ARMOR },
         .bodyColor = BODY_COLOR_GREEN,
         .speciesName = _("Grotle"),
         .cryId = CRY_GROTLE,
@@ -144,12 +145,12 @@ const struct SpeciesInfo gSpeciesInfoGen4[] =
 
     [SPECIES_TORTERRA] =
     {
-        .baseHP        = 95,
-        .baseAttack    = 109,
-        .baseDefense   = 105,
-        .baseSpeed     = 56,
-        .baseSpAttack  = 75,
-        .baseSpDefense = 85,
+        .baseHP        = 90,
+        .baseAttack    = 119,
+        .baseDefense   = 107,
+        .baseSpeed     = 51,
+        .baseSpAttack  = 68,
+        .baseSpDefense = 88,
         .types = MON_TYPES(TYPE_GRASS, TYPE_GROUND),
         .catchRate = 45,
     #if P_UPDATED_EXP_YIELDS >= GEN_8
@@ -166,7 +167,7 @@ const struct SpeciesInfo gSpeciesInfoGen4[] =
         .friendship = STANDARD_FRIENDSHIP,
         .growthRate = GROWTH_MEDIUM_SLOW,
         .eggGroups = MON_EGG_GROUPS(EGG_GROUP_MONSTER, EGG_GROUP_GRASS),
-        .abilities = { ABILITY_OVERGROW, ABILITY_NONE, ABILITY_SHELL_ARMOR },
+        .abilities = { ABILITY_ROCK_HEAD, ABILITY_SOLID_ROCK, ABILITY_SHELL_ARMOR },
         .bodyColor = BODY_COLOR_GREEN,
         .noFlip = TRUE,
         .speciesName = _("Torterra"),
@@ -235,7 +236,7 @@ const struct SpeciesInfo gSpeciesInfoGen4[] =
         .friendship = STANDARD_FRIENDSHIP,
         .growthRate = GROWTH_MEDIUM_SLOW,
         .eggGroups = MON_EGG_GROUPS(EGG_GROUP_FIELD, EGG_GROUP_HUMAN_LIKE),
-        .abilities = { ABILITY_BLAZE, ABILITY_NONE, ABILITY_IRON_FIST },
+        .abilities = { ABILITY_BLAZE, ABILITY_NONE, ABILITY_VITAL_SPIRIT },
         .bodyColor = BODY_COLOR_BROWN,
         .noFlip = TRUE,
         .speciesName = _("Chimchar"),
@@ -285,10 +286,11 @@ const struct SpeciesInfo gSpeciesInfoGen4[] =
             gOverworldPalette_Chimchar,
             gShinyOverworldPalette_Chimchar
         )
+        .perfectIVCount = STARTER_PERFECT_IV_COUNT,
         .levelUpLearnset = sChimcharLevelUpLearnset,
         .teachableLearnset = sChimcharTeachableLearnset,
         .eggMoveLearnset = sChimcharEggMoveLearnset,
-        .evolutions = EVOLUTION({EVO_LEVEL, 14, SPECIES_MONFERNO}),
+        .evolutions = EVOLUTION({EVO_LEVEL, 16, SPECIES_MONFERNO}),
     },
 
     [SPECIES_MONFERNO] =
@@ -309,7 +311,7 @@ const struct SpeciesInfo gSpeciesInfoGen4[] =
         .friendship = STANDARD_FRIENDSHIP,
         .growthRate = GROWTH_MEDIUM_SLOW,
         .eggGroups = MON_EGG_GROUPS(EGG_GROUP_FIELD, EGG_GROUP_HUMAN_LIKE),
-        .abilities = { ABILITY_BLAZE, ABILITY_NONE, ABILITY_IRON_FIST },
+        .abilities = { ABILITY_BLAZE, ABILITY_NONE, ABILITY_VITAL_SPIRIT },
         .bodyColor = BODY_COLOR_BROWN,
         .noFlip = TRUE,
         .speciesName = _("Monferno"),
@@ -365,11 +367,11 @@ const struct SpeciesInfo gSpeciesInfoGen4[] =
 
     [SPECIES_INFERNAPE] =
     {
-        .baseHP        = 76,
-        .baseAttack    = 104,
+        .baseHP        = 77,
+        .baseAttack    = 108,
         .baseDefense   = 71,
-        .baseSpeed     = 108,
-        .baseSpAttack  = 104,
+        .baseSpeed     = 111,
+        .baseSpAttack  = 108,
         .baseSpDefense = 71,
         .types = MON_TYPES(TYPE_FIRE, TYPE_FIGHTING),
         .catchRate = 45,
@@ -388,7 +390,7 @@ const struct SpeciesInfo gSpeciesInfoGen4[] =
         .friendship = STANDARD_FRIENDSHIP,
         .growthRate = GROWTH_MEDIUM_SLOW,
         .eggGroups = MON_EGG_GROUPS(EGG_GROUP_FIELD, EGG_GROUP_HUMAN_LIKE),
-        .abilities = { ABILITY_BLAZE, ABILITY_NONE, ABILITY_IRON_FIST },
+        .abilities = { ABILITY_BLAZE, ABILITY_IRON_FIST, ABILITY_VITAL_SPIRIT },
         .bodyColor = BODY_COLOR_BROWN,
         .speciesName = _("Infernape"),
         .cryId = CRY_INFERNAPE,
@@ -446,7 +448,7 @@ const struct SpeciesInfo gSpeciesInfoGen4[] =
         .baseAttack    = 51,
         .baseDefense   = 53,
         .baseSpeed     = 40,
-        .baseSpAttack  = 61,
+        .baseSpAttack  = 71,
         .baseSpDefense = 56,
         .types = MON_TYPES(TYPE_WATER),
         .catchRate = 45,
@@ -458,7 +460,7 @@ const struct SpeciesInfo gSpeciesInfoGen4[] =
         .growthRate = GROWTH_MEDIUM_SLOW,
         .eggGroups = MON_EGG_GROUPS(EGG_GROUP_WATER_1, EGG_GROUP_FIELD),
     #if P_UPDATED_ABILITIES >= GEN_9
-        .abilities = { ABILITY_TORRENT, ABILITY_NONE, ABILITY_COMPETITIVE },
+        .abilities = { ABILITY_TORRENT, ABILITY_COMPETITIVE, ABILITY_CLEAR_BODY },
     #else
         .abilities = { ABILITY_TORRENT, ABILITY_NONE, ABILITY_DEFIANT },
     #endif
@@ -507,6 +509,7 @@ const struct SpeciesInfo gSpeciesInfoGen4[] =
             gOverworldPalette_Piplup,
             gShinyOverworldPalette_Piplup
         )
+        .perfectIVCount = STARTER_PERFECT_IV_COUNT,
         .levelUpLearnset = sPiplupLevelUpLearnset,
         .teachableLearnset = sPiplupTeachableLearnset,
         .eggMoveLearnset = sPiplupEggMoveLearnset,
@@ -516,7 +519,7 @@ const struct SpeciesInfo gSpeciesInfoGen4[] =
     [SPECIES_PRINPLUP] =
     {
         .baseHP        = 64,
-        .baseAttack    = 66,
+        .baseAttack    = 61,
         .baseDefense   = 68,
         .baseSpeed     = 50,
         .baseSpAttack  = 81,
@@ -531,7 +534,7 @@ const struct SpeciesInfo gSpeciesInfoGen4[] =
         .growthRate = GROWTH_MEDIUM_SLOW,
         .eggGroups = MON_EGG_GROUPS(EGG_GROUP_WATER_1, EGG_GROUP_FIELD),
     #if P_UPDATED_ABILITIES >= GEN_9
-        .abilities = { ABILITY_TORRENT, ABILITY_NONE, ABILITY_COMPETITIVE },
+        .abilities = { ABILITY_TORRENT, ABILITY_COMPETITIVE, ABILITY_CLEAR_BODY },
     #else
         .abilities = { ABILITY_TORRENT, ABILITY_NONE, ABILITY_DEFIANT },
     #endif
@@ -594,11 +597,11 @@ const struct SpeciesInfo gSpeciesInfoGen4[] =
     [SPECIES_EMPOLEON] =
     {
         .baseHP        = 84,
-        .baseAttack    = 86,
-        .baseDefense   = 88,
+        .baseAttack    = 81,
+        .baseDefense   = 89,
         .baseSpeed     = 60,
-        .baseSpAttack  = 111,
-        .baseSpDefense = 101,
+        .baseSpAttack  = 116,
+        .baseSpDefense = 111,
         .types = MON_TYPES(TYPE_WATER, TYPE_STEEL),
         .catchRate = 45,
     #if P_UPDATED_EXP_YIELDS >= GEN_8
@@ -615,7 +618,7 @@ const struct SpeciesInfo gSpeciesInfoGen4[] =
         .growthRate = GROWTH_MEDIUM_SLOW,
         .eggGroups = MON_EGG_GROUPS(EGG_GROUP_WATER_1, EGG_GROUP_FIELD),
     #if P_UPDATED_ABILITIES >= GEN_9
-        .abilities = { ABILITY_TORRENT, ABILITY_NONE, ABILITY_COMPETITIVE },
+        .abilities = { ABILITY_FILTER, ABILITY_COMPETITIVE, ABILITY_FULL_METAL_BODY },
     #else
         .abilities = { ABILITY_TORRENT, ABILITY_NONE, ABILITY_DEFIANT },
     #endif

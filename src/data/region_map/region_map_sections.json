@@ -1626,6 +1626,14 @@
       "y": 4,
       "width": 1,
       "height": 1
+    },
+    {
+      "id": "MAPSEC_PETALBURG_GROTTO",
+      "name": "Petalburg Grotto"
+    },
+    {
+      "id": "MAPSEC_RUSTBORO_GROTTO",
+      "name": "RUSTBORO_GROTTO"
     }
   ]
 }

@@ -5820,6 +5820,8 @@ static void UNUSED DisplayExpPoints(u8 taskId, TaskFunc task, u8 holdEffectParam
 #define ENDLESS_CANDY_PARAM 10
 #define CANDY_BAG_PARAM 20
 
+static const u8 gText_PkmnGainedExpAndElevatedToLvCap[] = _("{STR_VAR_1} got raised to the Level Cap!");
+
 void ItemUseCB_RareCandy(u8 taskId, TaskFunc task)
 {
     struct Pokemon *mon = &gParties[B_TRAINER_PLAYER][gPartyMenu.slotId];
@@ -5830,7 +5832,7 @@ void ItemUseCB_RareCandy(u8 taskId, TaskFunc task)
     u8 holdEffectParam = GetItemHoldEffectParam(*itemPtr);
 
     sInitialLevel = GetMonData(mon, MON_DATA_LEVEL);
-    if (!(B_RARE_CANDY_CAP && sInitialLevel >= GetCurrentLevelCap()))
+    if (!(B_ENDLESS_CANDY_CAP && sInitialLevel >= GetCurrentLevelCap()))
     {
         BufferMonStatsToTaskData(mon, arrayPtr);
         cannotUseEffect = ExecuteTableBasedItemEffect(mon, *itemPtr, gPartyMenu.slotId, 0);
@@ -5850,12 +5852,16 @@ void ItemUseCB_RareCandy(u8 taskId, TaskFunc task)
         sInitialLevel = 0;
         sFinalLevel = 0;
 
-        if (holdEffectParam == RARE_CANDY_PARAM
-        || holdEffectParam == ENDLESS_CANDY_PARAM
-        || holdEffectParam == CANDY_BAG_PARAM) // Rare Candy
+        if (holdEffectParam == RARE_CANDY_PARAM) // Rare Candy
         {
             targetSpecies = GetEvolutionTargetSpecies(mon, EVO_MODE_NORMAL, ITEM_NONE, NULL, &canStopEvo, CHECK_EVO);
         }
+
+        if (holdEffectParam == ENDLESS_CANDY_PARAM) // Endless Candy
+        {
+            targetSpecies = GetEvolutionTargetSpecies(mon, EVO_MODE_NORMAL, ITEM_NONE, NULL, &canStopEvo, CHECK_EVO);
+        }
+
 
         if (targetSpecies != SPECIES_NONE)
         {
@@ -5879,7 +5885,7 @@ void ItemUseCB_RareCandy(u8 taskId, TaskFunc task)
     {
         sFinalLevel = GetMonData(mon, MON_DATA_LEVEL);
         gPartyMenuUseExitCallback = TRUE;
-        UpdateMonDisplayInfoAfterRareCandy(gPartyMenu.slotId, mon);
+        //UpdateMonDisplayInfoAfterRareCandy(gPartyMenu.slotId, mon);
         if(holdEffectParam == RARE_CANDY_PARAM)
             RemoveBagItem(gSpecialVar_ItemId, 1);
         GetMonNickname(mon, gStringVar1);
@@ -5897,11 +5903,9 @@ void ItemUseCB_RareCandy(u8 taskId, TaskFunc task)
                 StringExpandPlaceholders(gStringVar4, gText_PkmnElevatedToLvVar2);
             }
             else if (holdEffectParam == CANDY_BAG_PARAM) // Candy Bag
-            {
-                sFinalLevel = GetCurrentLevelCap();    
-                
+            { 
                 ConvertIntToDecimalStringN(gStringVar2, sFinalLevel, STR_CONV_MODE_LEFT_ALIGN, 3);
-                StringExpandPlaceholders(gStringVar4, gText_PkmnElevatedToLvVar2);
+                StringExpandPlaceholders(gStringVar4, gText_PkmnGainedExpAndElevatedToLvCap);
             }
             else // Exp Candies
             {

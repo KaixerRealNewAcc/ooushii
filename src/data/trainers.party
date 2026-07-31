@@ -74,6 +74,97 @@ Comments can be added as C comment blocks
 
 /*Comments can also be on a single line*/
 
+/* Reordering Trainers By splits. */
+
+/* Roxanne Split! */
+
+=== TRAINER_CALVIN_1 ===
+Name: Calvin
+Class: Youngster
+Pic: Youngster
+Gender: Male
+Music: Male
+Double Battle: No
+AI: Smart Trainer
+
+Aipom @ Oran Berry
+Level: 9
+Ability: Technician
+Nature: Docile
+- Fake Out
+- Scratch
+- Astonish
+
+Wingull @ Oran Berry
+Level: 9
+Ability: Water Absorb
+Nature: Docile
+- Water Gun
+- Wing Attack
+- Supersonic
+
+=== TRAINER_RICK ===
+Name: Rick
+Class: Bug Catcher
+Pic: Bug Catcher
+Gender: Male
+Music: Male
+Double Battle: No
+AI: Smart Trainer
+
+Nincada @ Oran Berry
+Level: 9
+Ability: Swarm
+Nature: Docile
+- Bug Bite
+- Mud-Slap
+
+Pineco @ Oran Berry
+Level: 9
+Ability: Shell Armor
+Nature: Docile
+- Bug Bite
+- Rollout
+- Self-Destruct
+
+Grubbin @ Oran Berry
+Level: 9
+Ability: Swarm
+Nature: Docile
+- Bug Bite
+- Spark
+
+=== TRAINER_ALLEN ===
+Name: Allen
+Class: Youngster
+Pic: Youngster
+Gender: Male
+Music: Male
+Double Battle: No
+AI: Smart Trainer
+
+Hoppip @ Oran Berry
+Level: 9
+Ability: Chlorophyll
+Nature: Docile
+- Mega Drain
+- Air Cutter
+- Splash
+
+Goldeen @ Oran Berry
+Level: 9
+Ability: Lightning Rod
+Nature: Docile
+- Aqua Jet
+- Horn Attack
+- Pluck 
+
+Litleo @ Oran Berry
+Level: 9
+Ability: Rivalry
+Nature: Docile
+- Headbutt
+- Incinerate
 
 === TRAINER_NONE ===
 Name:
@@ -5942,19 +6033,6 @@ Hariyama
 Level: 39
 IVs: 29 HP / 29 Atk / 29 Def / 29 SpA / 29 SpD / 29 Spe
 
-=== TRAINER_CALVIN_1 ===
-Name: CALVIN
-Class: Youngster
-Pic: Youngster
-Gender: Male
-Music: Male
-Double Battle: No
-AI: Check Bad Move
-
-Poochyena
-Level: 5
-IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
-
 === TRAINER_BILLY ===
 Name: BILLY
 Class: Youngster
@@ -6206,23 +6284,6 @@ IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
 Zigzagoon
 Level: 16
-IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
-
-=== TRAINER_ALLEN ===
-Name: ALLEN
-Class: Youngster
-Pic: Youngster
-Gender: Male
-Music: Male
-Double Battle: No
-AI: Check Bad Move
-
-Zigzagoon
-Level: 4
-IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
-
-Taillow
-Level: 3
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
 === TRAINER_TIMMY ===
@@ -11250,23 +11311,6 @@ IVs: 12 HP / 12 Atk / 12 Def / 12 SpA / 12 SpD / 12 Spe
 Wailmer
 Level: 39
 IVs: 12 HP / 12 Atk / 12 Def / 12 SpA / 12 SpD / 12 Spe
-
-=== TRAINER_RICK ===
-Name: RICK
-Class: Bug Catcher
-Pic: Bug Catcher
-Gender: Male
-Music: Male
-Double Battle: No
-AI: Check Bad Move
-
-Wurmple
-Level: 4
-IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
-
-Wurmple
-Level: 4
-IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
 === TRAINER_LYLE ===
 Name: LYLE

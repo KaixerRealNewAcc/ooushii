@@ -3556,21 +3556,33 @@ bool8 PokemonUseItemEffects(struct Pokemon *mon, enum Item item, u8 partyIndex, 
             {
                 u8 param = GetItemHoldEffectParam(item);
                 dataUnsigned = 0;
+                enum Species species = GetMonData(mon, MON_DATA_SPECIES);
+                u32 currentLevelCap = GetCurrentLevelCap();
 
                 if (param == 0) // Rare Candy
                 {
-                    dataUnsigned = gExperienceTables[gSpeciesInfo[GetMonData(mon, MON_DATA_SPECIES)].growthRate][GetMonData(mon, MON_DATA_LEVEL) + 1];
-                }
-                else if (param - 1 < ARRAY_COUNT(sExpCandyExperienceTable)) // EXP Candies
-                {
-                    enum Species species = GetMonData(mon, MON_DATA_SPECIES);
-                    dataUnsigned = sExpCandyExperienceTable[param - 1] + GetMonData(mon, MON_DATA_EXP);
-
-                    if (B_RARE_CANDY_CAP && B_EXP_CAP_TYPE == EXP_CAP_HARD)
+                    if (B_RARE_CANDY_CAP == TRUE && B_EXP_CAP_TYPE == EXP_CAP_HARD)
                     {
-                        u32 currentLevelCap = GetCurrentLevelCap();
+                        dataUnsigned = gExperienceTables[gSpeciesInfo[species].growthRate][GetMonData(mon, MON_DATA_LEVEL) + 1];
+                    }
+                }
+                else if (param == 10) // Endless Candy
+                {
+                    if (B_ENDLESS_CANDY_CAP == TRUE && B_EXP_CAP_TYPE == EXP_CAP_HARD)
+                    {
                         if (dataUnsigned > gExperienceTables[gSpeciesInfo[species].growthRate][currentLevelCap])
                             dataUnsigned = gExperienceTables[gSpeciesInfo[species].growthRate][currentLevelCap];
+                    }
+                    else
+                    {
+                        dataUnsigned = gExperienceTables[gSpeciesInfo[species].growthRate][GetMonData(mon, MON_DATA_LEVEL) + 1];
+                    }
+                }
+                else if (param == 20) // EXP Candies
+                {
+                    if (B_EXP_CAP_TYPE == EXP_CAP_HARD)
+                    {
+                        dataUnsigned = gExperienceTables[gSpeciesInfo[species].growthRate][currentLevelCap];
                     }
                     else if (dataUnsigned > gExperienceTables[gSpeciesInfo[species].growthRate][MAX_LEVEL])
                     {
